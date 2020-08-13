@@ -47,8 +47,9 @@ print(test)
 rollingindex1=int(input("Einstellung des ersten Rades: "))
 rollingindex2=int(input("Einstellung des zweiten Rades: "))
 rollingindex3=int(input("Einstellung des dritten Rades: "))
-test2 = enigma(input())
 endrolle = False
+test2 = enigma(input())
+
 
 print(test2)
 input("Press enter to exit...")
