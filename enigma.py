@@ -43,11 +43,11 @@ def rolkod(rolle, status, letter):
 	return out
 test = enigma(word)
 print(test)
-test2 = input()
+
 rollingindex1=int(input("Einstellung des ersten Rades: "))
 rollingindex2=int(input("Einstellung des zweiten Rades: "))
 rollingindex3=int(input("Einstellung des dritten Rades: "))
-test2 = enigma(test2)
+test2 = enigma(input())
 endrolle = False
 
 print(test2)
