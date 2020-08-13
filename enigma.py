@@ -13,24 +13,28 @@ def enigma(word):
 	global rollingindex1, rollingindex2,rollingindex3
 	word2 = ""		
 	for letter in word.lower():
-		if endrolle:	
-			letter = rolkod(rolle1,rollingindex1,letter)
-			letter = rolkod(rolle2,rollingindex2,letter)
-			letter = rolkod(rolle3,rollingindex3,letter)
-		elif endrolle != True:
-			letter = rolkod(rolle1,rollingindex3 * -1,letter)
-			letter = rolkod(rolle2,rollingindex2 * -1,letter)
-			letter = rolkod(rolle3,rollingindex1 * -1,letter)
-		word2 += letter
-		rollingindex1+=1
-		if rollingindex1 > 25:
-			rollingindex1 = 0
-			rollingindex2 += 1
-		if rollingindex2 > 25:
-			rollingindex2 = 0
-			rollingindex3 += 1
-		if rollingindex3 > 25:
-			rollingindex3 = 0
+		if letter in abc:
+			
+			if endrolle:	
+				letter = rolkod(rolle1,rollingindex1,letter)
+				letter = rolkod(rolle2,rollingindex2,letter)
+				letter = rolkod(rolle3,rollingindex3,letter)
+			elif endrolle != True:
+				letter = rolkod(rolle1,rollingindex3 * -1,letter)
+				letter = rolkod(rolle2,rollingindex2 * -1,letter)
+				letter = rolkod(rolle3,rollingindex1 * -1,letter)
+			word2 += letter
+			rollingindex1+=1
+			if rollingindex1 > 25:
+				rollingindex1 = 0
+				rollingindex2 += 1
+			if rollingindex2 > 25:
+				rollingindex2 = 0
+				rollingindex3 += 1
+			if rollingindex3 > 25:
+				rollingindex3 = 0
+		else:
+			word += letter
 	return word2
 def rolkod(rolle, status, letter):
 	letter = abc.index(letter)
