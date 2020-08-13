@@ -43,9 +43,9 @@ def rolkod(rolle, status, letter):
 	return out
 test = enigma(word)
 print(test)
-rollingindex1=1
-rollingindex2=1
-rollingindex3=1
+rollingindex1=int(input("Einstellung des ersten Rades: "))
+rollingindex2=int(input("Einstellung des zweiten Rades: "))
+rollingindex3=int(input("Einstellung des dritten Rades: "))
 endrolle = False
 test2 = enigma(input())
 print(test2)
