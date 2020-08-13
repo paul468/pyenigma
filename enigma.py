@@ -1,5 +1,7 @@
 abc = "abcdefghijklmnopqrstuvwxyz"
 rolle1 = abc
+rolle2 = abc
+rolle3 = abc
 
 endrolle = True
 word = input()
@@ -13,12 +15,12 @@ def enigma(word):
 	for letter in word.lower():
 		if endrolle:	
 			letter = rolkod(rolle1,rollingindex1,letter)
-			letter = rolkod(rolle1,rollingindex2,letter)
-			letter = rolkod(rolle1,rollingindex3,letter)
+			letter = rolkod(rolle2,rollingindex2,letter)
+			letter = rolkod(rolle3,rollingindex3,letter)
 		elif endrolle != True:
 			letter = rolkod(rolle1,rollingindex3 * -1,letter)
-			letter = rolkod(rolle1,rollingindex2 * -1,letter)
-			letter = rolkod(rolle1,rollingindex1 * -1,letter)
+			letter = rolkod(rolle2,rollingindex2 * -1,letter)
+			letter = rolkod(rolle3,rollingindex1 * -1,letter)
 		word2 += letter
 		rollingindex1+=1
 		if rollingindex1 > 25:
