@@ -34,7 +34,7 @@ def enigma(word):
 			if rollingindex3 > 25:
 				rollingindex3 = 0
 		else:
-			word += letter
+			word2 += letter
 	return word2
 def rolkod(rolle, status, letter):
 	letter = abc.index(letter)
